@@ -38,11 +38,20 @@ namespace SylphyHorn
 				this.SetupShortcut();
 			}
 
+			if(Args.Options.Length>0)
+			{
+				var a = "1";
+			}
+
 #if !DEBUG
 			var appInstance = new MetroTrilithon.Desktop.ApplicationInstance().AddTo(this);
 			if (appInstance.IsFirst || Args.Restarted.HasValue)
 #endif
 			{
+
+				
+
+
 				if (WindowsDesktop.VirtualDesktop.IsSupported)
 				{
 					this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
